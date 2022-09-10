@@ -20,6 +20,15 @@ pipeline{
                 sh "npm test"
             }
         }
+        
+        stage('Release'){
+            steps {
+                sh '''
+                   oc project parasharsingh8086-greetings
+                   oc start-build greeing-console --follow --wait
+                '''   
+            }
+        }
 
         // Add the Release stage here
     }
