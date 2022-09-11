@@ -14,5 +14,6 @@ spec:
   output:
     to:
       kind: DockerImage
-      name: quay.apps.ocp.kohlerco.com/openshiftocpwin_greeting-console
-
+      name: quay.io/parashar_singh/greeting-console
+    pushSecret:
+      name: quay-credentials
